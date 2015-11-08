@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+<script>
+function getWorkout(){
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = loadData;
+	xmlhttp.open("GET", "../json/workout.json", false);
+	xmlhttp.send();
+}
+
+function loadData(){
+	if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		var theTXT = xmlhttp.responseText;
+		var obj = JSON.parse(theTXT);
+		var output = "";
+
+		for(var x=0; x<obj.workout.length; x++){
+			var day = obj.workout[x].day;
+				output += "<tr><td class='align-center' colspan='2'>"+day+"</td></tr>";
+				
+			for (var i=0; i<obj.workout[x].exercise.length; i++){
+				var exercise = obj.workout[x].exercise[i];
+				
+				output += "<tr><td>"+exercise+"</td>";
+			}
+			document.getElementById('output').innerHTML = output;
+		}
+	}
+}
+</script>
+</head>
+
+<body onLoad="getWorkout()">
+<div class="grid wrap">
+<table class="unit whole workout" id="output">
+</table>
+</div>
+</body>
+</html>

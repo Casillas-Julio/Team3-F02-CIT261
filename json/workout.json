@@ -1,0 +1,25 @@
+{"workout":[
+	{
+		"day":"Monday",
+		"exercise":[
+			"Bench Press",
+			"Bent Over Row",
+			"DB Shoulder Press",
+			"Lying Tricep Extension",
+			"Barbell or DB Curl"]
+	},
+	{
+		"day":"Tuesday",
+		"exercise":[
+			"Squat",
+			"Stif Leg Deadlift",
+			"Leg Extension",
+			"Leg Curl",
+			"Standing Calf Raise",
+			"Abs",
+			"Lying Leg Raise",
+			"Swiss Ball Crunch"
+		]
+	}
+]
+}
