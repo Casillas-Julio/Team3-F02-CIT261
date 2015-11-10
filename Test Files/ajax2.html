@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- <title>Ashlie's Portfolio</title>
+  <link href="main.css" rel="stylesheet" type="text/css">  -->
+  <script>
+var xmlhttp = new XMLHttpRequest();
+var url = "../workout.json";
+var myArr;
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myArr = JSON.parse(xmlhttp.responseText);
+        myFunction(myArr);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+function myFunction(myArr) {
+    var out = "";
+    for(var i = 0; i < myArr.workout.length; i++) {
+        out += "<br/>" + myArr.workout[i].day + "<ul>";
+      for(var j = 0; j < myArr.workout[i].exercise.length; j++)
+          out += "<li>" + myArr.workout[i].exercise[j] + "</li>";
+      out += "</ul>";
+    }
+   // out = myArr.workout[0].day + " " + myArr.workout[0].exercise[0];
+    document.getElementById("id01").innerHTML = out;
+}
+function workoutChange(value){
+    var out = "";
+    document.getElementById("workoutDay").innerHTML = myArr[value].day;
+}
+  </script>
+</head>
+<body>
+
+<div id="id01"></div></br>
+<div id="workoutDay"></div>
+
+</body>
+</html>
