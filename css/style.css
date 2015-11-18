@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 @import url("gridism.css");
 @import url("normalize.css");
 
@@ -136,6 +136,53 @@ h4 {
 #edit-target-weight {
     display:none;
 }
+/* profile template tabs CSS */
+.tab {
+    padding-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #888;
+}
+        
+.tabs {
+    display: table;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+            
+}
+        
+.tabs li {
+    float: left;
+    line-height: 38px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.tabs a {
+    background-color: #eff0f2;
+    border-bottom: 1px solid #fff;
+    color: #888;
+    font-weight: 500;
+    display: block;
+    letter-spacing: 0;
+    outline: none;
+    padding: 0 10px;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid #05B378;
+}
+        
 /* PUSH MENU */
 #menu {
     position: fixed;
