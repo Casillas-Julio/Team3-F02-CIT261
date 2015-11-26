@@ -3,11 +3,46 @@
       By Ashlie Horst -->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Stable Page Test</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+      <title>Stable Page Test</title>
+      <script>
+
+      function getWorkout(day){
+      	xmlhttp = new XMLHttpRequest();
+	      xmlhttp.onreadystatechange = loadData(day);
+	      xmlhttp.open("GET", "../json/workout.json", false);
+	      xmlhttp.send();
+      }
+      function loadData(day){
+	      if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		      var theTXT = xmlhttp.responseText;
+		      var obj = JSON.parse(theTXT);
+		      var output = "";
+		      
+	            for(var x=0; x<obj.workout.length; x++){
+	                  // We only want to display the right day (not all of them)
+	                  if (x == day){
+      			      var day = obj.workout[x].day;
+				            output += "<tr><td class='align-center' colspan='2'><h2>"+day+"</h2></td></tr>";
+				
+			            for (var i=0; i<obj.workout[x].exercise.length; i++){
+				            var exercise = obj.workout[x].exercise[i];
+				            var reps = obj.workout[x].reps[i];
+				            var url = obj.workout[x].url[i];
+				
+				            output += "<tr><td>"+exercise+"</td><td>"+reps+"</td><td><img class='workoutImg' src='"+url+"'></td></tr>";
+			            }
+			      }
+			      document.getElementById('output').innerHTML = output;
+		      }
+	      }
+      }
+      </script>
     </head>
     <body>
-    
+
       <!-- This div holds the other pages that are being shown via Ajax -->
       <!-- chooseplan.html as well as profile-template.html -->
       <div id = "body"> </div>
@@ -15,7 +50,10 @@
       <!-- This is the workouts div. It will be hidden until a tab is selected on profile-template.html -->
       <!-- This div assumes that we want to see one workout at a time along with profile-template.html -->
       <!-- When we go to a different page, the visibility will be hidden again -->
-      <div id = "workouts" style="visibility:hidden"> </div>
+      <!-- <div id = "workouts" style="visibility:hidden"> </div> -->
+      <div class="grid wrap">
+            <table class="unit whole workout" id="output"></table>
+      </div>
       
     </body>
 </html>
