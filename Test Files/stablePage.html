@@ -9,13 +9,13 @@
       <title>Stable Page Test</title>
       <script>
 
-      function getWorkout(day){
+      function getWorkout(numDay){
       	xmlhttp = new XMLHttpRequest();
-	      xmlhttp.onreadystatechange = loadData(day);
+	      xmlhttp.onreadystatechange = loadData(numDay);
 	      xmlhttp.open("GET", "../json/workout.json", false);
 	      xmlhttp.send();
       }
-      function loadData(day){
+      function loadData(numDay){
 	      if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 		      var theTXT = xmlhttp.responseText;
 		      var obj = JSON.parse(theTXT);
@@ -23,7 +23,7 @@
 		      
 	            for(var x=0; x<obj.workout.length; x++){
 	                  // We only want to display the right day (not all of them)
-	                  if (x == day){
+	                  if (x == numDay){
       			      var day = obj.workout[x].day;
 				            output += "<tr><td class='align-center' colspan='2'><h2>"+day+"</h2></td></tr>";
 				
