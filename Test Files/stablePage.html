@@ -9,44 +9,64 @@
       <title>Stable Page Test</title>
       <script>
 
-      function getWorkout(numDay){
-      	xmlhttp = new XMLHttpRequest();
-	      xmlhttp.onreadystatechange = loadData(numDay);
-	      xmlhttp.open("GET", "../json/workout.json", false);
-	      xmlhttp.send();
-      }
-      function loadData(numDay){
-	      if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-		      var theTXT = xmlhttp.responseText;
-		      var obj = JSON.parse(theTXT);
-		      var output = "";
+        var xmlhttp = new XMLHttpRequest();
+        var file = "../json/workout.json";
+        var myArr;
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                myArr = JSON.parse(xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET", file, true);
+        xmlhttp.send();
+
+        function loadData(numDay){
+            var output = "";
 		      
-	            for(var x=0; x<obj.workout.length; x++){
-	                  // We only want to display the right day (not all of them)
-	                  if (x == numDay){
-      			      var day = obj.workout[x].day;
-				            output += "<tr><td class='align-center' colspan='2'><h2>"+day+"</h2></td></tr>";
+            for(var x=0; x<myArr.workout.length; x++){
+                // We only want to display the right day (not all of them)
+                if (x == numDay){
+                    var day = myArr.workout[x].day;
+                    output += "<tr><td class='align-center' colspan='2'><h2>"+day+"</h2></td></tr>";
 				
-			            for (var i=0; i<obj.workout[x].exercise.length; i++){
-				            var exercise = obj.workout[x].exercise[i];
-				            var reps = obj.workout[x].reps[i];
-				            var url = obj.workout[x].url[i];
+                    for (var i=0; i<myArr.workout[x].exercise.length; i++){
+                        var exercise = myArr.workout[x].exercise[i];
+                        var reps = myArr.workout[x].reps[i];
+                        var url = myArr.workout[x].url[i];
 				
-				            output += "<tr><td>"+exercise+"</td><td>"+reps+"</td><td><img class='workoutImg' src='"+url+"'></td></tr>";
-			            }
-			      }
-			      document.getElementById('output').innerHTML = output;
-		      }
-	      }
-      }
+                        output += "<tr><td>"+exercise+"</td><td>"+reps+"</td><td><img class='workoutImg' src='"+url+"'></td></tr>";
+                    }
+                }
+                document.getElementById('output').innerHTML = output;
+            }
+	}
+          
+        var xmlhttps; 
+        function loadDoc() 
+        {
+            // Get the body
+            var url = "../profile-template.html";
+            xmlhttps=new XMLHttpRequest();
+	    xmlhttps.onreadystatechange=state_Add;
+	    xmlhttps.open("GET", url, true);
+	    xmlhttps.send(null);
+        }
+
+        function state_Add()
+        {
+            if (xmlhttps.readyState == 4 && xmlhttps.status == 200) 
+            document.getElementById("urlDiv").innerHTML=xmlhttps.responseText;
+        }  
+
       </script>
     </head>
-    <body>
+    <body onload="loadDoc()">
 
       <!-- This div holds the other pages that are being shown via Ajax -->
       <!-- chooseplan.html as well as profile-template.html -->
       <div id = "body"> </div>
-      
+      <div id= "urlDiv"></div></br>
+
       <!-- This is the workouts div. It will be hidden until a tab is selected on profile-template.html -->
       <!-- This div assumes that we want to see one workout at a time along with profile-template.html -->
       <!-- When we go to a different page, the visibility will be hidden again -->
