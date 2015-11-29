@@ -45,5 +45,39 @@ document.addEventListener('readystatechange', function() {
 });
 
 
+function getWorkout(){
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = loadData;
+	xmlhttp.open("GET", "../json/workout.json", false);
+	xmlhttp.send();
+}
 
+function loadData(codeDay){
+	if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		var theTXT = xmlhttp.responseText;
+		var obj = JSON.parse(theTXT);
+		var output = "";
 
+		for(var x=0; x<obj.workout.length; x++){
+			if (codeDay == x){
+			var day = obj.workout[x].day;
+				output += "<tr><td align='center' colspan='2'><h1>"+day+"</h1></td></tr>";
+				
+			for (var i=0; i<obj.workout[x].exercise.length; i++){
+				var exercise = obj.workout[x].exercise[i];
+				var reps = obj.workout[x].reps[i];
+				var url = obj.workout[x].url[i];
+				var video = obj.workout[x].video[i];
+				
+				output += "<tr><td><hr></td></tr>"+
+						  "<tr><td align='center'><h2>"+exercise+"</h2></td></tr>"+
+						  "<tr><td align='center'>"+reps+"</td></tr>"+
+						  "<tr><td colspan='2' align='center'><img class='workoutImg' src='.."+url+"'></td></tr>"+
+						  "<tr><td colspan='2'><iframe class='video' src='"+video+"' frameborder='0' allowfullscreen></iframe></td></tr>";
+						  
+			}
+			document.getElementById('output').innerHTML = output;
+		}
+		}
+	}
+}

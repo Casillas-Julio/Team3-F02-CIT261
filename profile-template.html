@@ -1,76 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script type="text/javascript" src="javascript/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/gridism.css" />
-        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-</head>
-<body>
-	<nav id="menu" role="navigation">
-        <div class="brand">&Aopf;</div>            
-        <ul>
-            <li><a href="#">My Profile</a></li>
-            <li><a href="#">Nutritional Facts</a></li>
-            
-        </ul>
-    </nav>
-    <div class="page-wrap">
-        <button id="menu-toggle"></button>
-        <div class="container" role="main">
-            <article id = "article">
-                <div id = "profile">
-                    <div id = "photo">
+    <head>
+    	<title>App</title>
+        <script type="text/javascript" src="javascript/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body onLoad="getWorkout()">
+        <nav id="menu">
+            <div class="brand">&Aopf;</div>            
+            <ul>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Nutritional Facts</a></li>
+            </ul>
+        </nav>
+        <div class="page-wrap">
+            <button id="menu-toggle"></button>
+            <div class="container" role="main">
+                <article id = "article">
+                    <div id = "profile">
+                        <div id = "photo">
+                        </div>
+                        <h2 class = "some-padding"> Welcome <span id="name">Jane Doe</span></h2><br>
+                        <table>
+                            <tr>
+                                <td><h3>Current Weight <span class="weight">250</span></h3></td>
+                                <td><a href="#" onclick="toggle_visibility('edit-weight');" >Edit Weight</a></td>
+                            </tr>
+                            <tr>
+                                <td id = "edit-weight">
+                                    <div>
+                                        <input type = "text" />
+                                        <input type = "submit" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h3>Target Weight <span class="weight">250</span></h3></td>
+                                <td><a href="#" onclick="toggle_visibility('edit-target-weight');">Edit Target Weight</a></td>
+                            </tr>
+                            <tr>
+                                <td id = "edit-target-weight">
+                                    <div >
+                                        <input type = "text" />
+                                        <input type = "submit" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <h4 id ="goal">Lost<span id="left"> 20</span>lbs! <span id = "remaining"> 40</span>lbs to go!</h4>
                     </div>
-
-                    <h2 class = "some-padding"> Welcome <span id="name">Jane Doe </span></h2></br>
-                   <table>
-                        <tr>
-                            <td><h3>Current Weight <span id = "weight">250</span></h3></td>
-                            <td><a href="#" onclick="toggle_visibility('edit-weight');" >Edit Weight</a></td>
-
-                        </tr>
-                        <tr>
-                            <td id = "edit-weight">
-                                <div >
-                                <input type = "text" />
-                                <input type = "submit" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h3>Target Weight <span id = "weight">250</span></h3></td>
-                            <td><a href="#" onclick="toggle_visibility('edit-target-weight');" >Edit Target Weight</a></td>
-
-                        </tr>
-                        <tr>
-                            <td id = "edit-target-weight">
-                                <div >
-                                <input type = "text" />
-                                <input type = "submit" />
-                                </div>
-                            </td>
-                        </tr>
-                        
-                        
-                    </table>
- 
-                    <h4 id ="goal">Lost<span id="left"> 20</span>lbs! <span id = "remaining"> 40</span>lbs to go!</h4>
-                     
-                </div>
-               
-
-            </article>
-             <div class="tab">
-
-                <ul class="tabs">
-                        <li><a href="#">Monday</a></li>
-                        <li><a href="#">Tuesday</a></li>
-                        <li><a href="#">Wednesday</a></li>
-                        <li><a href="#">Thursday</a></li>
-                        <li><a href="#">Friday</a></li>
-                        <li><a href="#">Saturday</a></li>
-                        <li><a href="#">Sunday</a></li>
+                </article>
+                <div class="tab">
+                    <ul class="tabs">
+                        <li><a href="javascript:loadData('0')">Monday</a></li>
+                        <li><a href="javascript:loadData('1')">Tuesday</a></li>
+                        <li><a href="javascript:loadData('2')">Thursday</a></li>
+                        <li><a href="javascript:loadData('3')">Friday</a></li>
                         <!--
                         Ashlie's Work
                         <li><a href="javascript:loadData('0')">Monday</a></li>
@@ -81,11 +66,15 @@
                         <li><a href="javascript:loadData('5')">Saturday</a></li>
                         <li><a href="javascript:loadData('6')">Sunday</a></li>
                         -->
-                </ul> 
-        </div>
-    </div>
-<footer>
-
-</footer>
-</body>
+                    </ul> 
+                </div>
+                <div class="grid wrap">
+                <table class="unit whole workout" id="output">
+                </table>
+                </div>
+            </div>
+            </div>
+            <footer>
+            </footer>
+    </body>
 </html>
