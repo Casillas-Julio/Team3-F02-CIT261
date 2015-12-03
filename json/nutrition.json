@@ -1,0 +1,24 @@
+{
+    "nutrition": [
+        {
+            "title": "Macros",
+            "description": "Counting calories? No way! What are Macros then? When you measure macros, you are measuring grams of carbs, fat, protein, etc. Your body needs a certain amount of these and counting calories just doesn't do it. You could eat 2,000 empty calories or 2,000 good calories and it will make a huge difference! http://www.bodybuilding.com/fun/ask-the-muscle-prof-what-are-the-ideal-macros-for-my-breakfast.html",
+        },
+        {
+            "title": "BMI",
+            "description": "Body Mass Index. Make sure that your goals are healthy and acheiveable. Take into account your body type as well! Two people of the same weight, but different heights and body types can change appearance drastically. You can take this quiz to find out your body type. http://www.bodybuilding.com/fun/becker3.htm",
+        },
+        {
+            "title": "Protein",
+            "description": "Protein is essential for muscle growth and recovery. Protein can be found in nuts, meat, yogurt, and egg whites.",
+        },
+        {
+            "title": "Vitamins",
+            "description": "Take a multivitamin daily. We do not intake enough vitamins that our body needs by just eating food. The body needs those extra vitamins that food alone cannot provide.",
+        },
+        {
+            "title": "Sleep",
+            "description": "In order to see results, you need to sleep! If the body does not have enough time to sleep, it will take a long tome to recover from the workout.",
+        },
+    ]
+}
