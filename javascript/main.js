@@ -45,17 +45,23 @@ document.addEventListener('readystatechange', function() {
 });
 
 
-function getWorkout(){
+function getWorkout(codeDay){
 	xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = loadData;
-	xmlhttp.open("GET", "../json/workout.json", false);
+        var myArr = "";
+	xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                myArr = JSON.parse(xmlhttp.responseText);
+            }
+        }
+	xmlhttp.open("GET", "json/workout.json", false);
 	xmlhttp.send();
+        loadData(codeDay, myArr);
 }
 
-function loadData(codeDay){
-	if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-		var theTXT = xmlhttp.responseText;
-		var obj = JSON.parse(theTXT);
+function loadData(codeDay, obj){
+	//if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+	//	var theTXT = xmlhttp.responseText;
+	//	var obj = JSON.parse(theTXT);
 		var output = "";
 
 		for(var x=0; x<obj.workout.length; x++){
@@ -79,5 +85,5 @@ function loadData(codeDay){
 			document.getElementById('output').innerHTML = output;
 		}
 		}
-	}
+	//}
 }
