@@ -9,6 +9,13 @@
                 "Lying Tricep Extension",
                 "Barbell or DB Curl"
             ],
+            "id": [
+                "BenchPress",
+                "BentOverRow",
+                "DBShoulderPress",
+                "LyingTricepExtension",
+                "BarbellorDBCurl"
+            ],
             "reps": [
                 "3 Sets of 8-12 repetitions",
                 "3 Sets of 8-12 repetitions",
@@ -17,11 +24,11 @@
                 "3 Sets of 8-12 repetitions"
             ],
             "url": [
-                "/images/workout/monday/1BenchPress.jpg",
-                "/images/workout/monday/2BentOverRow.jpg",
-                "/images/workout/monday/3DBShoulderPress.jpg",
-                "/images/workout/monday/4LyingTricepExtension.png",
-                "/images/workout/monday/5DBCurl.jpg"
+                "images/workout/monday/1BenchPress.jpg",
+                "images/workout/monday/2BentOverRow.jpg",
+                "images/workout/monday/3DBShoulderPress.jpg",
+                "images/workout/monday/4LyingTricepExtension.png",
+                "images/workout/monday/5DBCurl.jpg"
             ],
             "video": [
                 "https://www.youtube.com/embed/gRVjAtPip0Y",
@@ -42,6 +49,15 @@
                 "Lying Leg Raise",
                 "Swiss Ball Crunch"
             ],
+            "id": [
+                "Squat",
+                "StifLegDeadlift",
+                "LegExtension",
+                "LegCurl",
+                "StandingCalfRaise",
+                "LyingLegRaise",
+                "SwissBallCrunch"
+            ],
             "reps": [
                 "3 Sets of 8-12 repetitions",
                 "3 Sets of 8-12 repetitions",
@@ -52,13 +68,13 @@
                 "3 Sets of 10-15 repetitions"
             ],
             "url": [
-                "/images/workout/tuesday/1Squat.jpg",
-                "/images/workout/tuesday/2StiffLegDeadLift.jpg",
-                "/images/workout/tuesday/3LegExtension.jpg",
-                "/images/workout/tuesday/4LegCurl.jpg",
-                "/images/workout/tuesday/5StandingCalfRaise.jpg",
-                "/images/workout/tuesday/6LyingLegRaise.jpg",
-                "/images/workout/tuesday/7SwissballCrunch.jpg"
+                "images/workout/tuesday/1Squat.jpg",
+                "images/workout/tuesday/2StiffLegDeadLift.jpg",
+                "images/workout/tuesday/3LegExtension.jpg",
+                "images/workout/tuesday/4LegCurl.jpg",
+                "images/workout/tuesday/5StandingCalfRaise.jpg",
+                "images/workout/tuesday/6LyingLegRaise.jpg",
+                "images/workout/tuesday/7SwissballCrunch.jpg"
             ],
             "video": [
                 "https://www.youtube.com/embed/Dy28eq2PjcM",
@@ -79,6 +95,13 @@
                 "Tricep Cable Pressdown",
                 "Cable Curl"
             ],
+            "id": [
+                "Dips",
+                "Pull-Ups",
+                "DBSideLateral",
+                "TricepCablePressdown",
+                "CableCurl"
+            ],
             "reps": [
                 "3 Sets of 8-12 repetitions",
                 "3 Sets of 8-12 repetitions",
@@ -87,11 +110,11 @@
                 "3 Sets of 8-12 repetitions"
             ],
             "url": [
-                "/images/workout/thursday/1Dips.jpg",
-                "/images/workout/thursday/2PullUps.jpg",
-                "/images/workout/thursday/3DBSideLateral.jpg",
-                "/images/workout/thursday/4TricepCablePressDown.jpg",
-                "/images/workout/thursday/5CableCurl.jpg"
+                "images/workout/thursday/1Dips.jpg",
+                "images/workout/thursday/2PullUps.jpg",
+                "images/workout/thursday/3DBSideLateral.jpg",
+                "images/workout/thursday/4TricepCablePressDown.jpg",
+                "images/workout/thursday/5CableCurl.jpg"
             ],
             "video": [
                 "https://www.youtube.com/embed/wjUmnZH528Y",
@@ -112,6 +135,15 @@
                 "Inclined Crunch",
                 "Back Extension"
             ],
+            "id": [
+                "Deadlift",
+                "LegPress",
+                "Lunges",
+                "SeatedCalfRaise",
+                "DBShrugs",
+                "InclinedCrunch",
+                "BackExtension"
+            ],
             "reps": [
                 "3 Sets of 8-12 repetitions",
                 "3 Sets of 8-12 repetitions",
@@ -122,13 +154,13 @@
                 "3 Sets of 10-15 repetitions"
             ],
             "url": [
-                "/images/workout/friday/1DeadLift.jpg",
-                "/images/workout/friday/2LegPress.jpg",
-                "/images/workout/friday/3Lunges.jpg",
-                "/images/workout/friday/4SeatedCalfRaise.jpg",
-                "/images/workout/friday/5DBShrugs.jpg",
-                "/images/workout/friday/6InclineCrunch.jpg",
-                "/images/workout/friday/7BackExtension.jpg"
+                "images/workout/friday/1DeadLift.jpg",
+                "images/workout/friday/2LegPress.jpg",
+                "images/workout/friday/3Lunges.jpg",
+                "images/workout/friday/4SeatedCalfRaise.jpg",
+                "images/workout/friday/5DBShrugs.jpg",
+                "images/workout/friday/6InclineCrunch.jpg",
+                "images/workout/friday/7BackExtension.jpg"
             ],
             "video": [
                 "https://www.youtube.com/embed/-4qRntuXBSc",
