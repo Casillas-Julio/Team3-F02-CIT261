@@ -1,0 +1,43 @@
+<div id = "profile">
+                        <div class ="second-box">
+                            <div class="container-circle">
+                            <div class="circle"></div>	
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                        <table>
+                            <tr>
+                                <td colspan="2"><h2 class = "some-padding"> Welcome <span id="name">Jane Doe</span></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h3>Current Weight <span class="weight">250</span></h3></td>
+                                <td><a href="#" onclick="toggle_visibility('edit-weight');" >Edit Weight</a></td>
+                            </tr>
+                            <tr>
+                                <td id = "edit-weight">
+                                    <div>
+                                        <input type = "text" />
+                                        <input type = "submit" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h3>Target Weight <span class="weight">250</span></h3></td>
+                                <td><a href="#" onclick="toggle_visibility('edit-target-weight');">Edit Target Weight</a></td>
+                            </tr>
+                            <tr>
+                                <td id = "edit-target-weight">
+                                    <div >
+                                        <input type = "text" />
+                                        <input type = "submit" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><h4 id ="goal">Lost<span id="left"> 20</span>lbs! <span id = "remaining"> 40</span>lbs to go!</h4></td>
+                            </tr>
+                           
+                        </table>
+                        
+                        </div>
+                    </div>
