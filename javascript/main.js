@@ -81,9 +81,9 @@ function loadData(codeDay, obj) {
                 output += "<tr><td><hr></td></tr>" +
                         "<tr><td align='center'><h2>" + exercise + "</h2></td></tr>" +
                         "<tr><td align='center'>" + reps + "</td></tr>" +
-                        "<tr><td colspan='2' align='center'><img class='workoutImg' src='" + url + "'></td></tr>" +
-                        "<tr><td align='center' colspan='2'><button id='" + id + "'>Show/Hide Video</button></td></tr>" +
-                        "<tr><td align='center' colspan='2'><iframe id='" + id + "Video' style='display:none' src='" + video + "' frameborder='0' allowfullscreen></iframe></td></tr>"
+                        "<tr><td colspan='2' align='center'><img class='workoutImg' src='"+url+"'></td></tr>" +
+                        "<tr><td align='center' colspan='2'><button class='videoButton' id='"+id+"'>Show Video</button></td></tr>" +
+                        "<tr><td align='center' colspan='2'><iframe class='video' id='" + id + "Video' style='height:0px' src='" + video + "' frameborder='0' allowfullscreen></iframe></td></tr>"
                         ;
 
             }
@@ -93,18 +93,23 @@ function loadData(codeDay, obj) {
             var i;
             for (i = 0; i < buttons.length; i++) {
                 buttons[i].onclick = function () {
+					var bid = this.id;
                     var nid = this.id + "Video";
                     var x = document.getElementById(nid);
-                    if (x.style.display == "none") {
-                        x.style.display = "block";
+					var y = document.getElementById(bid);
+                    if (x.style.height == "0px") {
+                        x.style.height = "250px";
+						y.className = "videoButtonHide";
+						y.innerHTML = "Hide Video";
                     } else {
-                        x.style.display = "none";
+                        x.style.height = "0px";
+						y.innerHTML = "Show Video";
+						y.className = "videoButton";
                     }
                 };
             }
         }
     }
-    //}
 }
 
 function loadContent(page){

@@ -1,9 +1,13 @@
+<div class="grid wrap">
+<div class="unit whole">
+<h1>Nutritional Facts</h1>
 <h3>Macros</h3>
 <p>Counting calories? No way! What are Macros then? 
     When you measure macros, you are measuring grams of carbs, fat, protein, etc. 
     Your body needs a certain amount of these and counting calories just doesn't do it. 
-    You could eat 2,000 empty calories or 2,000 good calories and it will make a huge difference! 
-<a href="http://www.bodybuilding.com/fun/ask-the-muscle-prof-what-are-the-ideal-macros-for-my-breakfast.html">More on Macros</a></p>
+    You could eat 2,000 empty calories or 2,000 good calories and it will make a huge difference!
+<a href="http://www.bodybuilding.com/fun/ask-the-muscle-prof-what-are-the-ideal-macros-for-my-breakfast.html" target="_blank">More on Macros</a><br></p>
+<p><img src="images/macros.gif" width="490" height="275"></p>
 <br/>
 
 <h3>BMI</h3>
@@ -11,7 +15,7 @@
     Take into account your body type as well! 
     Two people of the same weight, but different heights and body types can change appearance drastically. 
     You can take this quiz to find out your body type. 
-<a href="http://www.bodybuilding.com/fun/becker3.htm">Find out your body type</a></p>
+<a href="http://www.bodybuilding.com/fun/becker3.htm" target="_blank">Find out your body type</a></p>
 <br/>
 
 <h3>Protein</h3>
@@ -27,3 +31,5 @@ The body needs those extra vitamins that food alone cannot provide.</p>
 <h3>Sleep</h3>
 <p>In order to see results, you need to sleep! 
 If the body does not have enough time to sleep, it will take a long tome to recover from the workout.</p>
+</div>
+</div>
