@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="javascript/main.js"></script>
+</head>
+
+<body>
+<table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+      <td>Weight:</td>
+      <td><input type="text" id="weight" value="59.8"><span class="smallText">(Kilograms)</span></td>
+    </tr>
+    <tr>	   
+      <td>Height:</td>
+      <td><input type="text" id="height" value="1.65"><span class="smallText">(Meters)</span></td>
+    </tr>
+    <tr>
+      <td>BMI:</td>
+      <td><input type="text" id="bmi" disabled></td>
+    </tr>
+    <tr>
+      <td><button onClick="javascript:calcBMI()">Save</button></td>
+    </tr>
+    <tr>
+      <td>Status:</td>
+      <td><span id="message"></span></td>
+    </tr>
+</table>
+</body>
+</html>

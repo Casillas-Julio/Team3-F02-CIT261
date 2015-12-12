@@ -1,0 +1,12 @@
+<div class="tab">
+	<ul class="tabs">
+		<li><a href="javascript:getWorkout('1')">Monday</a></li>
+		<li><a href="javascript:getWorkout('2')">Tuesday</a></li>
+		<li><a href="javascript:getWorkout('4')">Thursday</a></li>
+		<li><a href="javascript:getWorkout('5')">Friday</a></li>
+	</ul> 
+</div>
+<div class="grid wrap">
+	<table class="unit whole workout" id="output">
+	</table>
+</div>

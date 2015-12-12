@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stay Fit App</title>
+        <script type="text/javascript" src="javascript/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body onload="loadContent('profile.txt');loadStorage();">
+        <nav id="menu">
+            <div class="brand"><img src="images/logo.png" class="logo_small"></div>            
+            <ul>
+                <li><a href="javascript:loadContent('profile.txt');javascript:loadStorage();">My Profile</a></li>
+                <li><a href="javascript:loadContent('workout.txt')">Workout</a></li>
+                <li><a href="javascript:loadContent('nutrition.txt')">Nutritional Facts</a></li>
+            </ul>
+        </nav>
+        <div class="page-wrap">
+            <button id="menu-toggle"></button>
+            <div class="container">
+                <div class="grid wrap whole align-center"><img class="logo" src="images/logo.gif"></div>
+            </div>
+            <div class="container" role="main">
+                <article id="article">
+                    <!-- Content filled with AJAX request onload and onclick in menu -->
+                </article>
+            </div>
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>

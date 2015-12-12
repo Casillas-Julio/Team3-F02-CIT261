@@ -1,5 +1,8 @@
 {
     "workout": [
+		{
+			"day":"Sunday"
+		},
         {
             "day": "Monday",
             "exercise": [
@@ -86,6 +89,9 @@
                 "https://www.youtube.com/embed/r1QTuC2yYDI"
             ]
         },
+		{
+			"day":"Wednesday"
+		},
         {
             "day": "Thursday",
             "exercise": [
@@ -171,6 +177,9 @@
                 "https://www.youtube.com/embed/QhGU5cmNZds",
                 "https://www.youtube.com/embed/vx0jZBEmZcE"
             ]
-        }
+        },
+		{
+			"day":"Saturday"
+		}
     ]
 }
