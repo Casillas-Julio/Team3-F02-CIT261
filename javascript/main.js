@@ -6,6 +6,7 @@ function toggle_visibility(id) {
 
 }
 
+
 //toggle menu
 function hasClass(ele, cls) {
     return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));

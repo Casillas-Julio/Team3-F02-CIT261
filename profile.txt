@@ -1,3 +1,20 @@
+<div class = "profile-Section">
+<h1 id="display"></h1>
+<hr />
+<div>Current Weight</div>
+<input type="number" id="weight" />
+<input type="button" id="save" value='Save' />
+
+
+<h1 id="display2"></h1>
+<hr />
+<div>Target Weight</div>
+<input type="number" id="weight2" />
+<input type="button" id="save2" value='Save' />
+
+<h1 id = "lost"></h1>
+
+</div>
 <table>
     <tr>
       <td>Name:</td>
